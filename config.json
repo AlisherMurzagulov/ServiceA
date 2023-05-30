@@ -1,0 +1,40 @@
+{
+  "Cache": {
+    "Host": "",
+    "Port": 6060,
+    "DatabaseNumber": 1,
+    "Password": "",
+    "Keys": {
+      "UserPayments": {
+        "key": "PAYMENTS",
+        "expiration": 43200
+      },
+      "RateLimits":{
+        "key": "RATELIMIT",
+        "expiration": 43200
+      }
+    }
+  },
+  "Kafka": {
+    "Brokers": "",
+    "Producer": {
+      "Topic": "",
+      "BatchBytes": 1048576,
+      "BatchTimeoutMS": 500,
+      "BatchSize": 1
+    }
+  },
+  "RateLimit":{
+    "MaxRequestsPerSecond": 1,
+    "RequestTimeWindow": 1
+  },
+  "StopTimeoutMS": 5000,
+  "WebServer": {
+    "Port": 8080,
+    "GIN": {
+      "ReleaseMode": false,
+      "UseLogger": true,
+      "UseRecovery": false
+    }
+  }
+}
